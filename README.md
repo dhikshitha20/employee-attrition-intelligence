@@ -127,6 +127,10 @@ The model demonstrates strong predictive capability in identifying employees who
 * Explainable AI techniques for prediction transparency.
 * Automated HR recommendation system for retention strategies.
 
+  ## Live Demo
+
+🔗 https://employee-attrition-intelligence.streamlit.app/
+
 ---
 
 ## Conclusion
