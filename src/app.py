@@ -3,6 +3,7 @@ import pandas as pd
 import numpy as np
 import plotly.express as px
 import pickle
+import os
 
 st.set_page_config(page_title="Employee Attrition Intelligence Platform", layout="wide")
 
@@ -24,10 +25,14 @@ st.markdown("""
     </style>
 """, unsafe_allow_html=True)
 
-df = pd.read_csv('../data/WA_Fn-UseC_-HR-Employee-Attrition.csv')
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+df = pd.read_csv(
+    os.path.join(BASE_DIR, "data", "WA_Fn-UseC_-HR-Employee-Attrition.csv")
+)
 df['Attrition_num'] = df['Attrition'].map({'Yes': 1, 'No': 0})
 
-with open('model.pkl', 'rb') as f:
+with open(os.path.join(BASE_DIR, "src", "model.pkl"), "rb") as f:
     model = pickle.load(f)
 
 st.title("Employee Attrition Intelligence Platform")
