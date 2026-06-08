@@ -1,19 +1,23 @@
 # Employee Attrition Intelligence Platform
 
+## Live Demo
+
+🔗 https://employee-attrition-intelligence.onrender.com
+
 ## Project Overview
 
-Employee attrition is a critical challenge for organizations as it impacts productivity, operational costs, and workforce stability. This project leverages data analytics and machine learning techniques to identify the factors influencing employee turnover and predict employees who are at risk of leaving the organization.
+Employee attrition is a major challenge for organizations as it affects productivity, workforce stability, and operational costs. This project uses data analytics and machine learning to identify factors influencing employee turnover and predict employees who are at risk of leaving the organization.
 
-Using the IBM HR Analytics Employee Attrition dataset, the project performs exploratory data analysis, feature engineering, predictive modeling, and business intelligence reporting to generate actionable workforce insights.
+Using the IBM HR Analytics Employee Attrition dataset, the project performs exploratory data analysis, predictive modeling, and interactive visualization to generate actionable workforce insights.
 
 ---
 
 ## Objectives
 
-* Analyze employee demographics, job roles, compensation, and work-related factors affecting attrition.
-* Identify key patterns and trends associated with employee turnover.
-* Develop a machine learning model to predict attrition risk.
-* Provide an interactive dashboard for workforce analysis and decision-making.
+* Analyze employee demographics, compensation, and workplace factors affecting attrition.
+* Identify trends and patterns associated with employee turnover.
+* Build a machine learning model to predict attrition risk.
+* Develop an interactive dashboard for workforce analytics.
 
 ---
 
@@ -24,81 +28,69 @@ Using the IBM HR Analytics Employee Attrition dataset, the project performs expl
 * Total Records: 1,470 Employees
 * Features: 35 Employee Attributes
 * Target Variable: Attrition (Yes/No)
-* Data Quality: No Missing Values
-
-The dataset contains information related to employee demographics, job satisfaction, compensation, performance, work-life balance, and employment history.
-
----
-
-## Methodology
-
-### 1. Data Preprocessing
-
-* Data cleaning and validation
-* Encoding categorical variables
-* Feature selection and transformation
-
-### 2. Exploratory Data Analysis (EDA)
-
-* Attrition distribution analysis
-* Department-wise attrition trends
-* Income and overtime impact assessment
-* Age-group and experience-based analysis
-* Correlation and feature importance evaluation
-
-### 3. Machine Learning
-
-* Train-test data split
-* Random Forest Classification
-* Model evaluation using accuracy, precision, recall, and confusion matrix
-
-### 4. Business Intelligence Dashboard
-
-* Interactive visualizations using Streamlit
-* Dynamic filtering and KPI monitoring
-* Attrition risk analysis and reporting
-
----
-
-## Key Insights
-
-* Employees working overtime exhibit significantly higher attrition rates.
-* Lower monthly income is strongly associated with employee turnover.
-* Certain departments experience higher attrition compared to others.
-* Early and mid-career employees demonstrate increased attrition risk.
-* Job satisfaction and work-life balance are influential factors in employee retention.
+* Missing Values: None
 
 ---
 
 ## Technology Stack
 
-| Category             | Technologies                |
-| -------------------- | --------------------------- |
-| Programming Language | Python                      |
-| Data Analysis        | Pandas, NumPy               |
-| Visualization        | Matplotlib, Seaborn, Plotly |
-| Machine Learning     | Scikit-learn                |
-| Web Application      | Streamlit                   |
-| Version Control      | Git, GitHub                 |
+| Category             | Technologies  |
+| -------------------- | ------------- |
+| Programming Language | Python        |
+| Data Analysis        | Pandas, NumPy |
+| Visualization        | Plotly        |
+| Machine Learning     | Scikit-learn  |
+| Dashboard            | Streamlit     |
+| Deployment           | Render        |
+| Version Control      | Git, GitHub   |
+
+---
+
+## Key Features
+
+* Employee attrition analysis and trend identification
+* Department-wise attrition monitoring
+* Income and overtime impact analysis
+* Age distribution and workforce insights
+* Interactive filtering using Streamlit
+* Machine learning-based attrition prediction
+* Public deployment using Render
+
+---
+
+## Machine Learning Model
+
+**Algorithm:** Random Forest Classifier
+
+**Performance:**
+
+* Accuracy: ~87%
+* Binary Classification (Attrition: Yes/No)
+
+The model helps identify employees who may be at risk of attrition, enabling proactive workforce management.
+
+---
+
+## Key Insights
+
+* Employees working overtime exhibit higher attrition rates.
+* Lower monthly income is associated with increased turnover.
+* Certain departments experience higher attrition than others.
+* Early and mid-career employees show elevated attrition risk.
+* Job satisfaction and work-life balance significantly influence retention.
 
 ---
 
 ## Project Structure
 
 ```text
-employee-attrition-intelligence-platform/
+employee-attrition-intelligence/
 │
 ├── data/
-│   └── IBM_HR_Analytics.csv
-│
-├── notebooks/
-│   ├── exploratory_data_analysis.ipynb
-│   └── model_development.ipynb
+│   └── WA_Fn-UseC_-HR-Employee-Attrition.csv
 │
 ├── src/
 │   ├── app.py
-│   ├── preprocessing.py
-│   ├── train_model.py
 │   └── model.pkl
 │
 ├── requirements.txt
@@ -106,33 +98,37 @@ employee-attrition-intelligence-platform/
 └── .gitignore
 ```
 
----
+## Installation
 
-## Model Performance
+```bash
+git clone https://github.com/dhikshitha20/employee-attrition-intelligence.git
 
-| Metric    | Score                    |
-| --------- | ------------------------ |
-| Accuracy  | 87%                      |
-| Algorithm | Random Forest Classifier |
+cd employee-attrition-intelligence
 
-The model demonstrates strong predictive capability in identifying employees who may be at risk of attrition, supporting proactive workforce management strategies.
+pip install -r requirements.txt
+
+streamlit run src/app.py
+```
 
 ---
 
 ## Future Enhancements
 
-* Integration of advanced ensemble models such as XGBoost and LightGBM.
-* Deployment on cloud platforms for enterprise accessibility.
-* Real-time employee attrition monitoring.
-* Explainable AI techniques for prediction transparency.
-* Automated HR recommendation system for retention strategies.
+* XGBoost and LightGBM implementation
+* Explainable AI (SHAP)
+* Real-time HR analytics
+* Employee retention recommendation system
+* Advanced workforce forecasting
 
-  ## Live Demo
+---
 
-🔗 https://employee-attrition-intelligence.streamlit.app/
+## Links
+
+* GitHub Repository: https://github.com/dhikshitha20/employee-attrition-intelligence
+* Live Demo: https://employee-attrition-intelligence.onrender.com
 
 ---
 
 ## Conclusion
 
-The Employee Attrition Intelligence Platform combines data analytics, machine learning, and business intelligence to provide meaningful workforce insights. By identifying key attrition drivers and predicting turnover risk, organizations can make informed decisions to improve employee retention and optimize human resource strategies.
+The Employee Attrition Intelligence Platform combines data analytics, machine learning, and business intelligence to provide workforce insights and attrition risk prediction. The solution enables data-driven HR decision-making and supports employee retention strategies.
